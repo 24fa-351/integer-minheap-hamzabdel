@@ -35,7 +35,18 @@ void test_heap(void) {
 }
 
 int main(int argc, char *argv[]) {
+    FILE *file = freopen("output.txt", "w", stdout);
+
+    if (file == NULL) {
+        perror("Error w file");
+
+        return EXIT_FAILURE; 
+    }
+
     srand(time(NULL));
 
     test_heap();
+
+    fclose(file);
+    return EXIT_SUCCESS;
 }
