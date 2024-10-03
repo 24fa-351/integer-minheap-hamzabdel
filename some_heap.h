@@ -1,6 +1,6 @@
 
-#ifndef HEAP_H
-#define HEAP_H
+#ifndef SOME_HEAP_H
+#define SOME_HEAP_H
 
 // a min heap
 
@@ -31,4 +31,6 @@ heap_value_t heap_remove_min(heap_t *heap);
 
 void heap_print(heap_t *heap);
 
-#endif
+unsigned int heap_level(unsigned int index);
+
+#endif // SOME_HEAP_H
